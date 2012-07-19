@@ -71,8 +71,12 @@ adb pull /system/lib/liboemcamera_main.so ../../../vendor/$MANUFACTURER/$DEVICE/
 adb pull /system/lib/libOlaEngine.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libposteffect.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/lib/libgemini2.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/lib/libmmjpeg2.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/lib/libmmjps.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/lib/libmmstereo.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libmm-color-convertor.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libv8.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/hw/lights.msm8660.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -160,8 +164,12 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOlaEngine.so:system/lib/libOlaEngine.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libposteffect.so:system/lib/libposteffect.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:system/lib/libgemini.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini2.so:system/lib/libgemini2.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmipl.so:system/lib/libmmipl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg2.so:system/lib/libmmjpeg2.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjps.so:system/lib/libmmjps.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmstereo.so:system/lib/libmmstereo.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libv8.so:system/lib/libv8.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lights.msm8660.so:system/lib/hw/lights.msm8660.so \\

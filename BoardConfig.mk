@@ -31,6 +31,7 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/htc/shooteru/BoardConfigVendor.mk
 
+
 TARGET_BOOTLOADER_BOARD_NAME := shooteru
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=shooteru no_console_suspend=1
@@ -42,7 +43,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
 COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 TARGET_USES_OVERLAY := true
 
-#TARGET_HARDWARE_3D := true
+BOARD_HTC_3D_SUPPORT := true
+
+TARGET_HARDWARE_3D := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
