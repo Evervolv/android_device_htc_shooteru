@@ -23,7 +23,7 @@
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
-USE_CAMERA_STUB := true
+#USE_CAMERA_STUB := true
 
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
@@ -40,12 +40,11 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
 
-COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 TARGET_USES_OVERLAY := true
 
-BOARD_HTC_3D_SUPPORT := true
+#BOARD_HTC_3D_SUPPORT := true
 
-TARGET_HARDWARE_3D := true
+#TARGET_HARDWARE_3D := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -75,8 +74,8 @@ TARGET_KERNEL_CONFIG := shooter_u_defconfig
 TARGET_PREBUILT_KERNEL := device/htc/shooteru/prebuilt/kernel
 
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TARGET_RECOVERY_UI_LIB := librecovery_ui_shooteru
-BOARD_CUSTOM_GRAPHICS := ../../../device/htc/shooteru/recovery/graphics.c
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_shooteru
+#BOARD_CUSTOM_GRAPHICS := ../../../device/htc/shooteru/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/htc/shooteru/recovery/init.rc
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1

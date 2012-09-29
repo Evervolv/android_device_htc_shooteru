@@ -32,7 +32,6 @@ PRODUCT_COPY_FILES += \
 
 ## ramdisk stuffs
 PRODUCT_COPY_FILES += \
-    device/htc/shooteru/prebuilt/init:root/init \
     device/htc/shooteru/init.shooteru.rc:root/init.shooteru.rc \
     device/htc/shooteru/init.shooteru.usb.rc:root/init.shooteru.usb.rc \
     device/htc/shooteru/ueventd.shooteru.rc:root/ueventd.shooteru.rc
@@ -56,12 +55,12 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/shooteru/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # GPS and Light
 PRODUCT_PACKAGES += \
     gps.shooteru \
-    lights.shooteru
+    init
 
 ## dsp Audio
 PRODUCT_COPY_FILES += \
@@ -152,7 +151,7 @@ PRODUCT_COPY_FILES += \
 ## htc audio settings
 $(call inherit-product, device/htc/shooteru/media_htcaudio.mk)
 
-$(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/htc/shooteru/shooteru-vendor.mk)
 

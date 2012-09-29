@@ -7,9 +7,7 @@
 /dev/kgsl-3d0           0666    root        root
 /dev/kgsl-2d1           0666    root        root
 /dev/genlock            0666    root        root
-
-/dev/ion                0664    system      system
-
+/dev/graphics/*		0660	root	    graphics
 /dev/msm_rotator        0660    system      graphics
 /dev/pmem               0660    system      graphics
 
@@ -18,6 +16,7 @@
 /dev/msm_camera/*       0660    system      camera
 /dev/pmem_smipool*      0660    system      camera
 /dev/pmem_camera*       0660    system      camera
+/dev/video*		0660    system	    camera
 
 # the DIAG device node is world writable/readable.
 /dev/diag               0666    root        root
@@ -34,6 +33,7 @@
 /dev/msm_acdb           0660    system      audio
 /dev/codec_aic3254      0660    system      audio
 /dev/msm_audio_dev_ctrl 0660    system      audio
+/dev/control0		0660    system	    audio
 /dev/msm_mp3            0660    system      audio
 /dev/msm_mp3_lp         0660    system      audio
 /dev/msm_pcm_in         0660    system      audio
@@ -45,6 +45,7 @@
 /dev/pmem_audio         0660    system      audio
 /dev/pmem_adsp*         0660    system      audio
 /dev/tpa2051d3          0660    system      audio
+/dev/controlC0		0660    system      audio
 /dev/msm_vidc_dec       0660    system      audio
 /dev/msm_vidc_dec_sec   0660    system      audio
 /dev/msm_vidc_enc       0660    system      audio
