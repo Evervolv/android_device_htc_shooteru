@@ -40,10 +40,10 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
 
-TARGET_USES_OVERLAY := true
+TARGET_USES_PMEM := true
 
+#Disabled for now
 #BOARD_HTC_3D_SUPPORT := true
-
 #TARGET_HARDWARE_3D := true
 
 # cat /proc/emmc
