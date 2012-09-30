@@ -14,8 +14,8 @@
 # camera
 /dev/gemini0            0660    system      camera
 /dev/msm_camera/*       0660    system      camera
-/dev/pmem_smipool*      0660    system      camera
 /dev/pmem_camera*       0660    system      camera
+/dev/pmem_smipool*      0660    system      camera
 /dev/video*		0660    system	    camera
 
 # the DIAG device node is world writable/readable.
