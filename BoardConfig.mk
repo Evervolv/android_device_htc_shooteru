@@ -39,12 +39,11 @@ BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048 
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
-
+TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_USES_PMEM := true
 
-#Disabled for now
-#BOARD_HTC_3D_SUPPORT := true
-#TARGET_HARDWARE_3D := true
+BOARD_HTC_3D_SUPPORT := true
+TARGET_HARDWARE_3D := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -83,3 +82,7 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := android-toolchain-eabi-4.7.3
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+

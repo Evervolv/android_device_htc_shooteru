@@ -106,9 +106,10 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/dsp/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
     device/htc/shooteru/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg
 
-# Custom media config for HTC camera
+# Firmwares
 PRODUCT_COPY_FILES += \
-    device/htc/shooteru/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/shooteru/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
+    device/htc/shooteru/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
 
 # keylayouts
 PRODUCT_COPY_FILES += \

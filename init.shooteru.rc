@@ -279,11 +279,11 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
 service hciattach /system/bin/brcm_patchram_plus --enable_hci \
     --tosleep 50000 --baudrate 3000000 --use_baudrate_for_download \
     --patchram /vendor/firmware/bcm4329.hcd /dev/ttyHS0
-    class main
-    user bluetooth
+    user root
     group bluetooth net_bt_admin
     disabled
     oneshot
+
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 /dev/block/mmcblk0p18
     class core
