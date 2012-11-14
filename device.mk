@@ -109,7 +109,8 @@ PRODUCT_COPY_FILES += \
 # Firmwares
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/htc/shooteru/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
+    device/htc/shooteru/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
+    device/htc/shooteru/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw
 
 # keylayouts
 PRODUCT_COPY_FILES += \

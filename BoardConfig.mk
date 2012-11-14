@@ -40,9 +40,7 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
 TARGET_ARCH_VARIANT_CPU := cortex-a9
-TARGET_USES_PMEM := true
 
-BOARD_HTC_3D_SUPPORT := true
 TARGET_HARDWARE_3D := true
 
 # cat /proc/emmc
@@ -83,6 +81,9 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := android-toolchain-eabi-4.7.3
-TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+# Custom LUN File Path
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+
+TARGET_GLOBAL_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
+TARGET_GLOBAL_CPPFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
 
