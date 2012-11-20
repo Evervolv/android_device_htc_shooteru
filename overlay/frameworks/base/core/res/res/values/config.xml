@@ -38,9 +38,15 @@
          AC.  0 will not keep it on; or together 1 to stay on when plugged
          in to AC and 2 to stay on when plugged in to USB.  (So 3 for both.) -->
     <integer name="config_deskDockKeepsScreenOn">0</integer>
-    
+
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
+
+    <!-- Component name of the service providing network location support. -->
+    <string name="config_networkLocationProviderPackageName">com.google.android.location.NetworkLocationProvider</string>
+
+    <!-- Component name of the service providing geocoder API support. -->
+    <string name="config_geocodeProviderPackageName">com.google.android.location.GeocodeProvider</string>
 
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
@@ -119,7 +125,7 @@
         <item>0</item>
         <item>0</item>
     </integer-array>
-    
+
     <!-- Needed for capacitive buttons to work without toggling auto-brightness -->
     <bool name="config_autoBrightnessButtonKeyboard">false</bool>
 
@@ -159,7 +165,6 @@
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
         <item>"rndis0"</item>
-        <item>"usb0"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -200,19 +205,22 @@
 
     <!-- Component name of the service providing geocoder API support. -->
     <string name="config_geocodeProviderPackageName">com.google.android.location.GeocodeProvider</string>
-    
-    <!-- Vibrator pattern for feedback about touching a virtual key -->
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>40</item>
-    </integer-array>
-    
-    <!-- Boolean indicating if current platform supports quick switch-on/off of Bluetooth Module -->
-    <bool name="config_bluetooth_adapter_quick_switch">false</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
+    <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
+         specified -->
+    <string name="default_wallpaper_component">com.android.phasebeam/.PhaseBeamWallpaper</string>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>40</item>
+    </integer-array>
     <!-- The VoiceMail default value is displayed to my own number if it is true -->
     <bool name="config_telephony_use_own_number_for_voicemail">true</bool>
+
+    <!-- Boolean indicating if current platform supports quick switch-on/off of Bluetooth Module -->
+    <bool name="config_bluetooth_adapter_quick_switch">false</bool>
 
 </resources>

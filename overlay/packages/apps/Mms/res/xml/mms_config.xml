@@ -20,7 +20,9 @@
         version 3 - added min/max recycler values.
 -->
 
-<mms_config version="3">
+<mms_config version="4">
+    <!-- Flag indicating whether MMS should be enabled -->
+    <bool name="enabledMMS">true</bool>
 
     <!-- Maximum message size in bytes for a MMS message -->
     <int name="maxMessageSize">307200</int>
