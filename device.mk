@@ -41,12 +41,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/init.shooteru.usb.rc:root/init.shooteru.usb.rc \
     device/htc/shooteru/ueventd.shooteru.rc:root/ueventd.shooteru.rc
 
-# BCM4329 Firmwares
-PRODUCT_COPY_FILES += \
-    device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
-    device/htc/shooteru/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-    device/htc/shooteru/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
@@ -141,7 +135,8 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/shooteru/overlay
 # GPS and Light
 PRODUCT_PACKAGES += \
     gps.shooteru \
-    lights.shooteru
+    lights.shooteru \
+    com.android.future.usb.accessory 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
@@ -153,7 +148,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     htc.audio.hac.enable=0
 
 # Inherit makefiles
+
 $(call inherit-product-if-exists, vendor/htc/shooteru/shooteru-vendor-blobs.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 

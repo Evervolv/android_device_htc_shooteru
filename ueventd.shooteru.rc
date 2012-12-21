@@ -6,7 +6,6 @@
 /dev/kgsl-2d0           0666    root        root
 /dev/kgsl-3d0           0666    root        root
 /dev/kgsl-2d1           0666    root        root
-/dev/ion                0664    system      system
 /dev/msm_rotator        0660    system      graphics
 /dev/pmem               0660    system      graphics
 /dev/genlock            0666    root        root
@@ -32,6 +31,9 @@
 /dev/akm8975_aot        0640    compass     system
 /dev/cm3602             0640    compass     system
 /dev/lightsensor        0640    system      system
+/dev/mpu                0664    system      system
+/dev/mpuirq             0664    system      system
+/dev/timerirq           0664    system      system
 
 # audio
 /dev/msm_acdb           0660    system      audio
