@@ -1,7 +1,14 @@
 import init.shooteru.usb.rc
 
 on early-init
-	mkdir /mnt/usbdisk 0755 system system
+    mkdir /storage 0660 system sdcard_r
+    mkdir /storage/sdcard0 0660 system system
+    mkdir /mnt/usbdisk 0755 system system
+
+ # for backwards compatibility
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    export EXTERNAL_STORAGE /storage/sdcard0
 
 on early-fs
     mkdir /system
