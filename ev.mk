@@ -22,10 +22,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooteru BUILD_FINGERPRINT="spr
 #
 # Set up the product codename, build version & MOTD.
 #
-PRODUCT_CODENAME := Turba
-PRODUCT_VERSION_DEVICE_SPECIFIC := p1-$(shell date +%y%m%d)
+PRODUCT_CODENAME := Signum
+PRODUCT_VERSION_DEVICE_SPECIFIC := p1
 
-PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your HTC Evo 3D \nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n\n helicopter88 wishes you all a merry Christmas and an happy new year\n------------------------------------------------\n"
+PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your HTC Evo 3D \nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
 
 # Copy compatible bootanimation
 PRODUCT_COPY_FILES += \

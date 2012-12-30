@@ -110,9 +110,3 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 
 # Custom LUN File Path
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
-
-#TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
-
-# TWRP
-DEVICE_RESOLUTION := 540x960
-TW_INCLUDE_DUMLOCK := true

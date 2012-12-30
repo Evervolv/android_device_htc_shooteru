@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+# common msm8660 configs
+$(call inherit-product, device/htc/msm8660-common/msm8660.mk)
 
 ## New Adreno Drivers
 PRODUCT_COPY_FILES += \
@@ -25,11 +27,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/shooteru/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
     device/htc/shooteru/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw
-
-# common msm8660 configs - ignoring property overrides
-IGNORE_MSM8660_PROPERTIES := $(PRODUCT_PROPERTY_OVERRIDES)
-$(call inherit-product, device/htc/msm8660-common/msm8660.mk)
-PRODUCT_PROPERTY_OVERRIDES := $(IGNORE_MSM8660_PROPERTIES)
 
 ## The gps config appropriate for this device
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
@@ -92,9 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Custom media config
 PRODUCT_COPY_FILES += \
-     device/htc/shooteru/configs/media_profiles.xml:system/etc/media_profiles.xml \
-     device/htc/shooteru/configs/media_codecs.xml:system/etc/media_codecs.xml \
-     device/htc/shooteru/configs/audio_policy.conf:system/etc/audio_policy.conf
+     device/htc/shooteru/configs/media_profiles.xml:system/etc/media_profiles.xml 
 
 # keylayouts
 PRODUCT_COPY_FILES += \
@@ -135,7 +130,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/shooteru/overlay
 # GPS and Light
 PRODUCT_PACKAGES += \
     gps.shooteru \
-    lights.shooteru \
+    librs_jni \
     com.android.future.usb.accessory 
 
 PRODUCT_PROPERTY_OVERRIDES += \
