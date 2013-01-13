@@ -110,6 +110,10 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/firmware/default_bak.acdb:system/etc/firmware/default_bak.acdb \
     device/htc/shooteru/firmware/default_rogers_bak.acdb:system/etc/firmware/default_rogers_bak.acdb
 
+# BCM4329 BT Firmware
+PRODUCT_COPY_FILES += \
+     device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
+
 # QC thermald config
 PRODUCT_COPY_FILES += device/htc/shooteru/configs/thermald.conf:system/etc/thermald.conf
 
