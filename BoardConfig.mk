@@ -27,21 +27,20 @@
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/htc/shooteru/include
+TARGET_SPECIFIC_HEADER_PATH += device/htc/shooteru/include
 
+BOARD_VENDOR := htc
 TARGET_BOOTLOADER_BOARD_NAME := shooteru
 
+# Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=shooteru no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048 
-
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
-
-TARGET_KERNEL_SOURCE := kernel/htc/msm8660
 BUILD_KERNEL := true
-# 3D
-BOARD_HTC_3D_SUPPORT := true
-TARGET_HARDWARE_3D := true
+TARGET_KERNEL_SOURCE := kernel/htc/msm8660
+TARGET_KERNEL_CONFIG := shooter_u_defconfig
+
+# Partitions
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -65,9 +64,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1252770816
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-# Kernel Source
-TARGET_KERNEL_CONFIG := shooter_u_defconfig
-
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
@@ -76,25 +72,13 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-# Scorpion optimizations
-TARGET_ARCH_VARIANT_CPU := cortex-a9
+# Graphics / Video
+COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
 
 # Camera
-TARGET_DISABLE_ARM_PIE := true
-BOARD_CAMERA_USE_MM_HEAP := true
-COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA
-DYNAMIC_SHARED_LIBV8SO := true
-
-# Graphics / Video
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DNO_QCOM_MVS -DNO_HW_VSYNC
-COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
-TARGET_HAVE_BYPASS := false
-TARGET_USES_OVERLAY := true
-TARGET_QCOM_HDMI_OUT := true
-TARGET_QCOM_HDMI_RESOLUTION_AUTO := true
-
-# Stagefright
-COMMON_GLOBAL_CFLAGS += -DQCOM_ICS_DECODERS
+BOARD_HTC_3D_SUPPORT := true
+TARGET_HARDWARE_3D := true
+BOARD_HAVE_HTC_FFC := true
 
 # Custom LUN File Path
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
@@ -110,3 +94,6 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 
 # Custom LUN File Path
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+
+# GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru

@@ -13,5 +13,5 @@ key 193   FUNC_2
 key 194   FUNC_1
 
 # CAMERA
-key 211   FOCUS
+key 211   FOCUS 	    WAKE_DROPPED
 key 212   CAMERA

@@ -419,7 +419,7 @@ struct msm_frame {
 	uint32_t error_code;
 	struct fd_roi_info roi_info;
 	uint32_t frame_id;
-	
+
 	/* Must atch to user space - msm_camera8x60_3D.h */
 	int stcam_quality_ind;
 	uint32_t stcam_conv_value;

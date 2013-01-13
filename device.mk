@@ -87,10 +87,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg \
     device/htc/shooteru/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg
 
-# Custom media config
-PRODUCT_COPY_FILES += \
-     device/htc/shooteru/configs/media_profiles.xml:system/etc/media_profiles.xml 
-
 # keylayouts
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl\
@@ -126,12 +122,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/shooteru/overlay
-
-# GPS and Light
-PRODUCT_PACKAGES += \
-    gps.shooteru \
-    librs_jni \
-    com.android.future.usb.accessory 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
