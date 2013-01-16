@@ -24,5 +24,3 @@ LOCAL_PATH := $(call my-dir)
 # overridden further down
 include $(CLEAR_VARS)
 
-# include the non-open-source counterpart to this file
--include vendor/htc/shooteru/AndroidBoardVendor.mk

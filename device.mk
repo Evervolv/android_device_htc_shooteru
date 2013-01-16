@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+# Include shooteru's BoardConfig.mk
+include device/htc/shooteru/BoardConfig.mk
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # common msm8660 configs
 $(call inherit-product, device/htc/msm8660-common/msm8660.mk)
 
@@ -27,9 +33,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/shooteru/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
     device/htc/shooteru/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw
-
-## The gps config appropriate for this device
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
 
 ## ramdisk stuffs
 PRODUCT_COPY_FILES += \
@@ -135,6 +138,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20 \
     htc.audio.alt.enable=1 \
     htc.audio.hac.enable=0
+
+
+
+# GPS
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
+
+PRODUCT_PACKAGES += \
+    gps.shooteru
 
 # Inherit makefiles
 

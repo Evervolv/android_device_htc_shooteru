@@ -21,9 +21,6 @@ on fs
 
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 
-    mkdir /vendor/etc 0771 system system
-    symlink /system/vendor/etc/audio_effects.conf /vendor/etc/audio_effects.conf
-
 on post-fs-data
     # double check the perms and set owner
     chown root root /devlog

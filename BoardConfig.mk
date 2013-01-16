@@ -97,3 +97,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
+
+# RIL
+BOARD_USE_NEW_LIBRIL_HTC := true
