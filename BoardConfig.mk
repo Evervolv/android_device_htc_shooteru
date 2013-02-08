@@ -26,8 +26,8 @@
 
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
-
-TARGET_SPECIFIC_HEADER_PATH += device/htc/shooteru/include
+# Broadcom specific config
+-include device/htc/msm8660-common/bcm.mk
 
 BOARD_VENDOR := htc
 TARGET_BOOTLOADER_BOARD_NAME := shooteru
@@ -82,11 +82,6 @@ BOARD_HAVE_HTC_FFC := true
 
 # Custom LUN File Path
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
-
-# Wifi
-BOARD_LEGACY_NL80211_STA_EVENTS := true
-WIFI_DRIVER_MODULE_NAME          := bcmdhd
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
 
 # Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
