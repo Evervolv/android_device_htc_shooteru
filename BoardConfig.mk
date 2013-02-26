@@ -38,7 +38,7 @@ BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048 
 BUILD_KERNEL := true
 TARGET_KERNEL_SOURCE := kernel/htc/msm8660
-TARGET_KERNEL_CONFIG := shooter_u_defconfig
+TARGET_KERNEL_CONFIG := ev_ubuntu_shooter_u_defconfig
 
 # Partitions
 
