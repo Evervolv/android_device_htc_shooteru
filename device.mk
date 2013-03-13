@@ -117,9 +117,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/shooteru/configs/thermald.conf:system/etc/thermald.conf
-
 # Vold
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/vold.fstab:system/etc/vold.fstab
