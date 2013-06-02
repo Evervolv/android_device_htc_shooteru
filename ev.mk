@@ -4,7 +4,7 @@ TARGET_USE_KEYBOARD := international
 # Call this first so apn list is actually copied
 $(call inherit-product, vendor/ev/config/gsm.mk)
 
-$(call inherit-product, device/htc/shooteru/full_shooteru.mk)
+$(call inherit-product, device/htc/shooteru/device.mk)
 
 # Inherit some common evervolv stuff.
 $(call inherit-product, vendor/ev/config/common_full_phone.mk)
@@ -15,7 +15,7 @@ $(call inherit-product, vendor/ev/config/common_full_phone.mk)
 PRODUCT_NAME    := ev_shooteru
 PRODUCT_BRAND   := htc
 PRODUCT_DEVICE  := shooteru
-PRODUCT_MODEL   := HTC Evo 3D GSM
+PRODUCT_MODEL   := Evo 3D GSM
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooteru BUILD_FINGERPRINT="sprint/htc_shooteru/shooteru:4.0.3/IML74K/130920.2:user/release-keys" PRIVATE_BUILD_DESC="2.08.651.2 CL130920 release-keys"
 
